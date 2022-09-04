@@ -30,13 +30,19 @@ const getCategoryNews = (categoryId, categoryName) => {
     .then((res) => res.json())
     .then((data) => {
       let categoryNewsData = data.data;
-      displayNews(categoryNewsData);
+      sort(categoryNewsData);
       categoryInfo.innerText = `${categoryNewsData.length} items found for category ${categoryName}`;
     })
     .catch((error) => {
       console.log(error);
     });
 };
+
+function sort(array) {
+  let newsArray = array;
+  let sortedArray = newsArray.sort((a, b) => b.total_view - a.total_view);
+  displayNews(sortedArray);
+}
 
 const displayNews = (newsData) => {
   const newsContainer = document.getElementById("news");
