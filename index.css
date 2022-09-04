@@ -7,5 +7,16 @@ body{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     /* truncate to 4 lines */
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
   }
+
+  @media only screen and (min-width: 1024px) {
+    .line-clamp-4 {
+      -webkit-line-clamp: 4;
+    }
+  }
+
+.active{
+    background-color: #EEEFFF;
+    color: #5D5FEF;
+}

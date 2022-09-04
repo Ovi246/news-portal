@@ -12,14 +12,14 @@ fetch(`${baseUrl}/categories`)
 
 const displayCategories = (categories) => {
   const categories_ul = document.getElementById("categories");
-  for (category of categories) {
+  categories.forEach((category) => {
     let categoryId = category.category_id;
     let categoryName = category.category_name;
     const categoryDiv = document.createElement("li");
-    categoryDiv.innerHTML = `<li class="text-xl mr-7 text-gray-400 cursor-pointer" onClick="getCategoryNews('${categoryId}','${categoryName}')">${category.category_name}</li>`;
+    categoryDiv.innerHTML = `<li class="text-lg lg:text-xl mr-7 text-gray-400 cursor-pointer" onClick="getCategoryNews('${categoryId}','${categoryName}')">${category.category_name}</li>`;
 
     categories_ul.appendChild(categoryDiv);
-  }
+  });
 };
 
 const getCategoryNews = (categoryId, categoryName) => {
@@ -56,20 +56,20 @@ const displayNews = (newsData) => {
     const newsCard = document.createElement("div");
     newsCard.innerHTML = `
       <div
-      class="w-full h-[340px] rounded-lg bg-white p-5 flex flex-row items-center"
+      class="w-full h-[340px] rounded-lg bg-white p-5 flex flex-col md:flex-row lg:flex-row items-center shadow-md shadow-purple-100"
       >
         <img
           src="${
             news.thumbnail_url === null ? "unavailable" : news.thumbnail_url
           }"
           alt=""
-          class="w-[244px] h-[300px] mr-10 rounded-md"
+          class="w-full h-[40%] md:w-[144px] md:h-[200px] lg:w-[244px] lg:h-[300px] sm:mb-5 md: mr-7 lg:mr-10 rounded-md"
         />
-        <div class="flex flex-col gap-10 w-full">
-          <h2 class="text-2xl font-bold">
+        <div class="flex flex-col gap-2.5 md:gap-5 lg:gap-10 w-full">
+          <h2 class="text-lg md:text-xl lg:text-2xl font-bold">
             ${news.title === null ? "unavailable" : news.title}
           </h2>
-          <p class="text-lg font-normal text-gray-400 line-clamp-4">
+          <p class="text-sm md:text-md lg:text-lg font-normal text-gray-400 line-clamp-4">
             ${news.details === null ? "unavailable" : news.details}
           </p>
           <div class="flex justify-between items-center">

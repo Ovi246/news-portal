@@ -24,13 +24,23 @@
   </head>
   <body>
     <header>
-      <div class="flex justify-between items-center mx-32 my-10">
+      <div
+        class="flex justify-between items-center mx-5 my-5 md:mx-16 md:my-12 lg:mx-32 lg:my-10"
+      >
         <div class="text-xl md:text-2xl lg:text-3xl font-bold text-[#5D5FEF]">
           Ajaira News Ltd.
         </div>
         <div>
-          <a class="mr-9 text-[#5D5FEF] font-bold" href="#">News</a>
-          <a class="mr-9 text-[#5D5FEF] font-bold" href="blog.html">Blog</a>
+          <a
+            class="mr-5 md:mr-7 text-[#5D5FEF] font-bold md:text-lg lg:text-xl"
+            href="#"
+            >News</a
+          >
+          <a
+            class="text-[#5D5FEF] font-bold md:text-lg lg:text-xl"
+            href="blog.html"
+            >Blog</a
+          >
         </div>
       </div>
       <hr class="w-[90%] mx-auto" />
@@ -40,17 +50,19 @@
       <section>
         <ul
           id="categories"
-          class="flex flex-col justify-evenly md:flex-row lg:flex-row mt-7"
+          class="flex flex-col items-center justify-center md:justify-evenly lg:justify-evenly md:flex-row lg:flex-row mt-3 lg:mt-7"
         ></ul>
       </section>
       <section>
         <div
-          class="w-full h-[63px] bg-white flex justify-start items-center rounded-md my-10"
+          class="w-full h-[33px] lg:h-[63px] bg-white flex justify-center lg:justify-start items-center rounded-md my-5 lg:my-10"
         >
-          <span id="categoryInfo" class="ml-5 text-md">No Data Available</span>
+          <span id="categoryInfo" class="ml-5 text-sm lg:text-md"
+            >No Data Available</span
+          >
         </div>
       </section>
-      <section class="flex justify-between items-center mb-14">
+      <section class="flex justify-between items-center mb-7 lg:mb-14">
         <div>
           <span class="font-semibold">Sort By View:</span>
           <select>
@@ -59,11 +71,13 @@
           </select>
         </div>
         <div>
-          <button class="px-4 py-2 rounded-md text-white bg-purple-500">
+          <button
+            class="px-2 py-1 lg:px-4 lg:py-2 rounded-md text-white bg-purple-500"
+          >
             Today's Pick
           </button>
           <button
-            class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md"
+            class="border border-purple-500 text-purple-500 px-2 py-1 lg:px-4 lg:py-2 rounded-md"
           >
             Trending
           </button>
@@ -117,6 +131,13 @@
         </div>
       </main>
     </div>
+    <footer>
+      <div
+        class="text-center flex justify-center items-center mt-20 font-semibold w-full h-[83px] bg-white"
+      >
+        Copyright @ Ajaira News Ltd. 2022
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src="index.js"></script>
