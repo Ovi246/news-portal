@@ -11,12 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="index.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
       <div class="flex justify-between items-center mx-32 my-10">
-        <div class="text-3xl font-bold text-[#5D5FEF]">Ajaira News Ltd.</div>
+        <div class="text-xl md:text-2xl lg:text-3xl font-bold text-[#5D5FEF]">
+          Ajaira News Ltd.
+        </div>
         <div>
           <a class="mr-9 text-[#5D5FEF] font-bold" href="#">News</a>
           <a class="mr-9 text-[#5D5FEF] font-bold" href="#">Blog</a>
@@ -27,7 +30,17 @@
 
     <div class="container mx-auto">
       <section>
-        <ul id="categories" class="flex"></ul>
+        <ul
+          id="categories"
+          class="flex flex-col justify-evenly md:flex-row lg:flex-row mt-7"
+        ></ul>
+      </section>
+      <section>
+        <div
+          class="w-full h-[63px] bg-white flex justify-start items-center rounded-md my-10"
+        >
+          <span id="categoryInfo" class="ml-5 text-md">No Data Available</span>
+        </div>
       </section>
     </div>
 
