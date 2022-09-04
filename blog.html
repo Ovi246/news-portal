@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- component -->
+    <div>
+      <section class="text-gray-700">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h1
+              class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4"
+            >
+              Assignemnt Questions
+            </h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+              The questions about milestone 6
+            </p>
+          </div>
+          <div class="flex flex-wrap lg:w-full mx-auto sm:mb-2 -mx-2">
+            <div class="w-full lg:w-3/2 px-4 py-2 mx-auto">
+              <details class="mb-4">
+                <summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                  Differences Between Arrow and Regular Functions
+                </summary>
+
+                <span>
+                  1. Arrow functions do not have an arguments binding. However,
+                  they have access to the arguments object of the closest
+                  non-arrow parent function. Named and rest parameters are
+                  heavily relied upon to capture the arguments passed to arrow
+                  functions. <br />
+                  2. Unlike regular functions, arrow functions do not have their
+                  own this. The value of this inside an arrow function remains
+                  the same throughout the lifecycle of the function and is
+                  always bound to the value of this in the closest non-arrow
+                  parent function. <br />
+                  3. Regular functions created using function declarations or
+                  expressions are constructible and callable. Since regular
+                  functions are constructible, they can be called using the new
+                  keyword. However, the arrow functions are only callable and
+                  not constructible, i.e arrow functions can never be used as
+                  constructor functions. Hence, they can never be invoked with
+                  the new keyword. <br />
+                  4. No duplicate named parameters Arrow functions can never
+                  have duplicate named parameters, whether in strict or
+                  non-strict mode. With regular functions, we can use duplicate
+                  named parameters in non-strict mode.
+                </span>
+              </details>
+              <details class="mb-4">
+                <summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                  Differences between var, let, and const
+                </summary>
+
+                <span>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><strong>var</strong></td>
+                        <td><strong>let</strong></td>
+                        <td><strong>const</strong></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          The scope of a <i>var </i>variable is functional
+                          scope.
+                        </td>
+                        <td>
+                          The scope of a<i> let</i> variable is block scope.
+                        </td>
+                        <td>
+                          The scope of a <i>const</i> variable is block scope.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          It can be updated and re-declared into the scope.
+                        </td>
+                        <td>
+                          It can be updated but cannot be re-declared into the
+                          scope.
+                        </td>
+                        <td>
+                          It cannot be updated or re-declared into the scope.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>It can be declared without initialization.</td>
+                        <td>It can be declared without initialization.</td>
+                        <td>It cannot be declared without initialization.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          It can be accessed without initialization as its
+                          default value is “undefined”.
+                        </td>
+                        <td>
+                          It cannot be accessed without initialization otherwise
+                          it will give ‘referenceError’.
+                        </td>
+                        <td>
+                          It cannot be accessed without initialization, as it
+                          cannot be declared without initialization.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          hoisting done , with initializing as ‘default’ value
+                        </td>
+                        <td>
+                          Hoisting is done , but not initialized (this is the
+                          reason for error when we access the let variable
+                          before declaration/initialization
+                        </td>
+                        <td>
+                          Hoisting is done, but not initialized (this is the
+                          reason for error when we access the const variable
+                          before declaration/initialization
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </span>
+              </details>
+              <details class="mb-4">
+                <summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                  Why We Use Template Strings in JavaScript
+                </summary>
+
+                <span>
+                  Template strings are a powerful feature of modern JavaScript
+                  released in ES6. It lets us insert/interpolate variables and
+                  expressions into strings without needing to concatenate like
+                  in older versions of JavaScript. It allows us to create
+                  strings that are complex and contain dynamic elements.<br />
+                  <br />
+                  1. Interpolating Variables and Expressions<br />
+                  2. Multiline Strings<br />
+                  3. Nesting Templates<br />
+                  4. Tagged Templates<br />
+                  5. Raw Strings<br />
+                </span>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

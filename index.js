@@ -44,21 +44,24 @@ const displayNews = (newsData) => {
   const loader = document.getElementById("loader");
 
   for (news of newsData) {
+    let date = new Date(news.author.published_date);
+    let dateList = date.toUTCString().split(" ");
+    let newDate = `${dateList[1]} ${dateList[2]}, ${dateList[3]}`;
     const newsCard = document.createElement("div");
     newsCard.innerHTML = `
       <div
-      class="w-full h-[340px] rounded-lg bg-white p-5 flex flex-row justify-center items-center"
+      class="w-full h-[340px] rounded-lg bg-white p-5 flex flex-row items-center"
       >
         <img
           src="${news.thumbnail_url}"
           alt=""
           class="w-[244px] h-[300px] mr-10 rounded-md"
         />
-        <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-10 w-full">
           <h2 class="text-2xl font-bold">
             ${news.title}
           </h2>
-          <p class="text-lg font-nomal text-gray-400">
+          <p class="text-lg font-normal text-gray-400 line-clamp-4">
             ${news.details}
           </p>
           <div class="flex justify-between items-center">
@@ -66,10 +69,10 @@ const displayNews = (newsData) => {
               <img src="${news.author.img}" alt="" class="w-[40px] h-[40px] mr-2" />
               <div class="flex flex-col">
                 <span>${news.author.name}</span>
-                <span>${news.author.published_date}</span>
+                <span>${newDate}</span>
               </div>
             </div>
-            <i class="fa-regular fa-eye">${news.total_view}</i>
+            <i class="fa-regular fa-eye"> ${news.total_view}</i>
             <div>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star-half-stroke"></i>
