@@ -12,10 +12,16 @@ fetch(`${baseUrl}/categories`)
 
 const displayCategories = (categories) => {
   const categories_ul = document.getElementById("categories");
+  categories_ul.addEventListener("click", function (event) {
+    event.preventDefault();
+    categories_ul.querySelector(".active")?.classList.remove("active");
+    event.target.classList.add("active");
+  });
   categories.forEach((category) => {
     let categoryId = category.category_id;
     let categoryName = category.category_name;
     const categoryDiv = document.createElement("li");
+
     categoryDiv.innerHTML = `<li class="text-lg lg:text-xl mr-7 text-gray-400 cursor-pointer" onClick="getCategoryNews('${categoryId}','${categoryName}')">${category.category_name}</li>`;
 
     categories_ul.appendChild(categoryDiv);

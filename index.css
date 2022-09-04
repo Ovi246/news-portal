@@ -18,5 +18,6 @@ body{
 
 .active{
     background-color: #EEEFFF;
-    color: #5D5FEF;
+    color: #5D5FEF !important;
+    padding: 5px;
 }
